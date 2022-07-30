@@ -15,8 +15,7 @@ function AddNewItemButton() {
         <div>
             <div>
             <Button
-                variant="success"
-                onClick={AddItemPage}> Add a new item</Button>
+                variant="success"> Add a new item</Button>
             </div>
         </div>
     ) : "not a user"
