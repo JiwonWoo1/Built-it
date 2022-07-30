@@ -6,6 +6,8 @@ import { Container, Form, Button } from 'react-bootstrap'
 import descriptionPic from '../Images/description.png'
 import '../../styles/home.css'
 import Filter from '../Filter/Filter';
+import ItemShowCase from '../product/ItemShowCase';
+
 const Home = () => {
   return (
     <Container>
@@ -24,6 +26,9 @@ const Home = () => {
         <Filter />
         
         {/* <UserProfile /> */}
+
+        <ItemShowCase />
+        <UserProfile />
     </Container>
   )
 }

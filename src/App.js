@@ -28,13 +28,12 @@ function App() {
       <Router>
           <Navigation />
           <Switch>
-            <Route exact path='/' component={Home}>
-              <Home />
-            </Route>
-
-            <Route path='/add_item' component={AddItemPage}>
-              <AddItemPage firebase={firebaseApp} />
-            </Route>
+          <Route exact path='/'>
+            <Home firebase={firebaseApp} />
+          </Route>
+          <Route path='/add_item'>
+            <AddItemPage firebase={firebaseApp} />
+          </Route>
           </Switch>
       </Router>   
     </div> 
