@@ -28,7 +28,6 @@ const Home = () => {
         {/* <UserProfile /> */}
 
         <ItemShowCase />
-        <UserProfile />
     </Container>
   )
 }

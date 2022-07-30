@@ -34,6 +34,7 @@ export const AddItemPage = (props) => {
     const { user, isAuthenticated, isLoading } = useAuth0();
 
     const [formData, setFormData] = useState({
+        user: '',
         image: '',
         description: '',
         used_items: '',
