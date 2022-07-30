@@ -32,13 +32,14 @@ export const AddItemPage = (props) => {
         event.preventDefault();
         console.log("clicked submit");
         try {
-            if(image == null) return;
-            const imageRef = ref(storage, `images/${image.name}`);
-            uploadBytes(imageRef, image).then((snapshot) => {
-                getDownloadURL(snapshot.ref).then((url)=> {
-                    setImageList((prev) => [...prev, url])
-                })
-            });
+            if(image != null) {
+                const imageRef = ref(storage, `images/${image.name}`);
+                uploadBytes(imageRef, image).then((snapshot) => {
+                    getDownloadURL(snapshot.ref).then((url)=> {
+                        setFormData(prev => ({...prev, image: url}))
+                    })
+                });
+            }
             const docRef = await addDoc(collection(db, "items"), formData);
             console.log("Document written with ID: ", docRef.id);
           } catch (e) {
@@ -57,11 +58,6 @@ export const AddItemPage = (props) => {
             })
         });
     }, []);
-    // const handleChange = e => {
-    //     if(e.target.files[0]) {
-    //         setImage(e.target.files[0]);
-    //     }
-    // };
     
     console.log("image", image);
 
@@ -76,10 +72,6 @@ export const AddItemPage = (props) => {
                     setImage(e.target.files[0]);
                 }} type="file" multiple/>
             </Form.Group>
-            
-            {imageList.map((url) => {
-                return <img src={url} />
-            })}
             <Form.Group className="mb-3" controlId="formDescription">
                 <Form.Label>Creation description</Form.Label>
                 <Form.Control onChange={(e) => setFormData({...formData, description: e.target.value})} type="text" placeholder="Enter description" />

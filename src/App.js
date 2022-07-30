@@ -9,6 +9,7 @@ import { Auth0Provider } from '@auth0/auth0-react';
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+import SearchPage from './component/pages/SearchPage';
 
 
 // CONFIG FILE GOES HERE
@@ -28,12 +29,19 @@ function App() {
       <Router>
           <Navigation />
           <Switch>
+          
           <Route exact path='/'>
             <Home firebase={firebaseApp} />
           </Route>
+          
           <Route path='/add_item'>
             <AddItemPage firebase={firebaseApp} />
           </Route>
+
+          <Route path='/search/:id?'>
+            <SearchPage firebase={firebaseApp} />
+          </Route>
+          
           </Switch>
       </Router>   
     </div> 

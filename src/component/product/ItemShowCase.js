@@ -4,11 +4,11 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container'
 
-import { getFirestore } from "firebase/firestore";
+import { getFirestore, setDoc } from "firebase/firestore";
 import { collection, getDocs } from "firebase/firestore";
 
 const ItemShowCase = (props) => {
-  const db = getFirestore(props.firestoreApp)
+  const db = getFirestore()
   const [showcaseItems, setShowcaseItems] = useState([])
 
 
@@ -19,7 +19,7 @@ const ItemShowCase = (props) => {
       setShowcaseItems(prev => ([...prev, doc.data()]))
     })}
     fetchData()
-  }, [])
+  }, [db])
 
   return (
     <Container className="item-showcase-container">
@@ -27,7 +27,7 @@ const ItemShowCase = (props) => {
         {showcaseItems.length >= 4 && Array.from({ length: 4 }).map((_, idx) => (
           <Col key={idx}>
             <Card>
-              <Card.Img variant="top" src="https://via.placeholder.com/150" />
+              <Card.Img variant="top" src={showcaseItems[idx].image} />
               <Card.Body>
                 <Card.Title>{showcaseItems[idx].name}</Card.Title>
                 <Card.Text>
