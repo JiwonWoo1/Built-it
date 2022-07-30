@@ -6,16 +6,16 @@ import Home from '../pages/Home';
 
 
 
-function AddNewItemButton() {
+function ProfileButton() {
     const { user, isAuthenticated, isLoading } = useAuth0();
 
     return isAuthenticated ? (
         <div>
             <div>
-            <Button variant="white"> Add a new item</Button>
+            <p style={{color: "#0A3622", fontSize: 25}}>Welcome {user.name}!</p>
             </div>
         </div>
     ) : "not a user"
 }
 
-export default AddNewItemButton
+export default ProfileButton

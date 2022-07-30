@@ -5,8 +5,8 @@ import { Button } from 'react-bootstrap'
 const LogoutButton = () => {
     const { logout } = useAuth0();
   return (
-    <Button 
-    variant="success"
+    <Button style={{width: '100px'}}
+    variant="white"
     onClick={() => logout( { returnTo: window.location.origin })}>Log out</Button>
     // <button onClick={() => logout( { returnTo: window.location.origin })}>Log out</button>
   )
