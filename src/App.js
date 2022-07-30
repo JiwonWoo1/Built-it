@@ -29,7 +29,7 @@ function App() {
           <Navigation />
           <Switch>
           <Route exact path='/'>
-            <Home />
+            <Home firebase={firebaseApp} />
           </Route>
           <Route path='/add_item'>
             <AddItemPage firebase={firebaseApp} />

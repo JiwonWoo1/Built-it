@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useFormik } from "formik";
 import { Form } from 'react-bootstrap';
-import Select from "react-select";
 import { Country, State, City } from 'country-state-city';
 
 export default function CountryStateCity() {

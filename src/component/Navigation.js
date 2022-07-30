@@ -11,7 +11,7 @@ const Navigation = () => {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand className="me-auto" href="#home">
+        <Navbar.Brand className="me-auto" href="/">
             <h2>BuiltIt</h2>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -19,7 +19,7 @@ const Navigation = () => {
           <Nav className="me-auto">
           </Nav>
           <Nav>
-            <Nav.Link href="#"><AddNewItemButton /></Nav.Link>
+            <Nav.Link href="/add_item"><AddNewItemButton /></Nav.Link>
             <Nav.Link href="#deets"><LoginButton /></Nav.Link>
             <Nav.Link href="#deets"><LogoutButton /></Nav.Link>
           </Nav>
