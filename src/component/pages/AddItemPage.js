@@ -65,7 +65,7 @@ export const AddItemPage = (props) => {
     
     console.log("image", image);
 
-    return isAuthenticated ? (
+    return (
         <Container className="add-item-container">
         <h1>Add a new Item</h1>
         <Form onSubmit={handleSubmit}>
@@ -113,6 +113,6 @@ export const AddItemPage = (props) => {
             </Button>
         </Form>
     </Container>
-    ) : <h1>you need to login</h1>
+    )
 
 }

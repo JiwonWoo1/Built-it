@@ -6,7 +6,7 @@ const LoginButton = () => {
     const { loginWithRedirect, isAuthenticated  } = useAuth0();
   return (
     <Button 
-    variant="outline-secondary"
+    variant="success"
     onClick={() => loginWithRedirect()}>Log in</Button>
   )
 }

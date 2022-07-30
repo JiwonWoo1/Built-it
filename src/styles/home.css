@@ -1,0 +1,26 @@
+.container {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.image {
+    object-fit: cover;
+    width: 100%;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.067);
+}
+
+.header {
+    font-size: 45px;
+    color: rgb(12, 99, 28);
+    text-align: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: fit-content;
+    margin: auto;
+    font-weight: bold;
+}

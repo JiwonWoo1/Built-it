@@ -19,9 +19,11 @@ const Navigation = () => {
           <Nav className="me-auto">
           </Nav>
           <Nav>
-            <Nav.Link href="#"><AddNewItemButton /></Nav.Link>
-            <Nav.Link href="#deets"><LoginButton /></Nav.Link>
-            <Nav.Link href="#deets"><LogoutButton /></Nav.Link>
+          <Nav.Link href="#"><AddNewItemButton /></Nav.Link>
+            {
+              isAuthenticated ?
+              <LogoutButton /> : <LoginButton />
+            }
           </Nav>
         </Navbar.Collapse>
       </Container>
