@@ -18,15 +18,13 @@ const Navigation = () => {
       <Container>
         <Navbar.Brand className="me-auto" href="/">
             <img src={logo1} />
-          <h2>BuiltIt</h2>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
-          </Nav>
-          {/* <Nav className='justify-content-center'>
-          <img src={logo} /> */}
 
+          <Nav className='m-auto'>
+          <img src={logo} />
+          </Nav>
           <Nav>
             <Nav.Link href="/add_item"><AddNewItemButton /></Nav.Link>
             {
