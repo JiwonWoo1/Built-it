@@ -24,9 +24,9 @@ const Home = () => {
 
         {/* Search Product filtering */}
         <Filter />
-        
-        {/* <UserProfile /> */}
-
+        <div style={{width: 800}} className="m-auto">
+          <h2 style={{marginTop: 30, color: '#0A3622'}}>Look how people rebuild recylced items!</h2>
+        </div>
         <ItemShowCase />
     </Container>
   )

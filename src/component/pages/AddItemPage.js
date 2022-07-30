@@ -66,6 +66,7 @@ export const AddItemPage = (props) => {
                         setFormData(prev => ({ ...prev, image: url }))
                     })
                 });
+                console.log(imageRef)
             }
             const docRef = await addDoc(collection(db, "items"), formData);
             console.log("Document written with ID: ", docRef.id);
@@ -86,15 +87,17 @@ export const AddItemPage = (props) => {
     return (
         <Container className="add-item-container">
             <ConfirmationModal show={showModal} handleClose={handleClose} handleReturn={handleReturn} />
-            <h1>Add a new Item</h1>
+            <h1 style={{color: '#0a3622'}}>Add a new Item</h1>
             <Form onSubmit={handleSubmit}>
 
                 <Form.Group controlId="formFile" className="mb-3">
                     <Form.Label>Add an image</Form.Label>
                     <Form.Control onChange={(e) => {
-                        setImage(e.target.files[0]);
+                        setFormData(e.target.files[0]);
                     }} type="file" multiple />
+
                 </Form.Group>
+
                 <Form.Group className="mb-3" controlId="formDescription">
                     <Form.Label>Creation description</Form.Label>
                     <Form.Control onChange={(e) => setFormData({ ...formData, description: e.target.value })} type="text" placeholder="Enter description" />
@@ -123,7 +126,7 @@ export const AddItemPage = (props) => {
                     <Form.Control onChange={(e) => setFormData({ ...formData, city: e.target.value })} type="text" placeholder="Which city you live in?" />
                 </Form.Group>
 
-                <Button variant="primary" type="submit">
+                <Button variant="success" type="submit">
                     Submit
                 </Button>
             </Form>

@@ -9,12 +9,14 @@ const Filter = () => {
      <Form className="d-flex mt-3">
          <Form.Control
            type="search"
-           placeholder="Search"
+           placeholder="Search For an Item!"
            className="me-2"
+           size='lg'
            aria-label="Search"
+           varient="outline-success"
            onChange={(e) => setQuery(e.target.value)}
          />
-         <Button href={"/search/"+ query} variant="outline-success" type="submit">Search</Button>
+         <Button href={"/search/"+ query} variant="success" type="submit">Search</Button>
      </Form>
     </Container>
   )

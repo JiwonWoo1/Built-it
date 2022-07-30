@@ -20,7 +20,7 @@ export default function CountryStateCity() {
   }, [state]);
 
   return (
-    <div className="App">
+    <div className="App" style={{marginTop: 40}}>
         <Container >
             <Row>
                 <Col xs lg="2">
