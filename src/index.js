@@ -8,15 +8,17 @@ import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
-    <Auth0Provider
-  domain="fire-tracker.us.auth0.com"
-  clientId="kDi9GOpDRo7IuR3p2t4610NkfMrSEjOQ"
-  redirectUri={window.location.origin}
-  >
-    <App />
-  </Auth0Provider>
-  </BrowserRouter>
+  <React.StrictMode>
+    <BrowserRouter>
+      <Auth0Provider
+    domain="fire-tracker.us.auth0.com"
+    clientId="kDi9GOpDRo7IuR3p2t4610NkfMrSEjOQ"
+    redirectUri={window.location.origin}
+    >
+      <App />
+    </Auth0Provider>
+    </BrowserRouter>
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

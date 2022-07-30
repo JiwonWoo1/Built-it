@@ -6,15 +6,14 @@ import { Auth0Provider } from '@auth0/auth0-react';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Router>
           <Navigation />
           <Switch>
-            <Route exact path='/' element={ <Home />} />
+            <Route exact path='/' component={Home}/>
           </Switch>
-      </Router>
-    </div>
-    
+      </Router>   
+    </div> 
   );
 }
 
