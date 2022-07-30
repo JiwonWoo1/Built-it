@@ -5,7 +5,6 @@ import Navbar from 'react-bootstrap/Navbar';
 import LoginButton from './buttons/LoginButton';
 import LogoutButton from './buttons/LogoutButton';
 import AddNewItemButton from './buttons/AddNewItemButton';
-import '../styles/navbar.css';
 import { useAuth0 } from '@auth0/auth0-react'
 import logo from './Images/logo.jpg'
 import logo1 from './Images/logo1.png'
