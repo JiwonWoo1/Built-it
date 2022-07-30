@@ -2,15 +2,17 @@ import React from 'react'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import LoginButton from './buttons/LoginButton';
 import LogoutButton from './buttons/LogoutButton';
+import '../styles/navbar.css';
 
 const Navigation = () => {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand href="#home">Fire Tracker</Navbar.Brand>
+        <Navbar.Brand className="me-auto" href="#home">
+            <h2>Fire Tracker</h2>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">

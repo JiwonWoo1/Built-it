@@ -1,20 +1,20 @@
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import './App.css';
 import Navigation from './component/Navigation';
 import Home from './component/pages/Home';
-import Login from './component/pages/Login';
-import Register from './component/pages/Register';
+import { Auth0Provider } from '@auth0/auth0-react';
 
 function App() {
   return (
     <div className="App">
       <Router>
           <Navigation />
+          <Switch>
             <Route exact path='/' element={ <Home />} />
-            <Route path='/login' component={<Login />} />
-            <Route path='/register' component={<Register />} />
+          </Switch>
       </Router>
     </div>
+    
   );
 }
 
