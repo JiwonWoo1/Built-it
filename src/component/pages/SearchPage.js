@@ -19,7 +19,6 @@ const SearchPage = (props) => {
 
   useEffect(() => {
     async function fetchData() {
-      console.log(id);
       var items = []
       const querySnapshot = await getDocs(collection(db, "items"))
       querySnapshot.forEach((doc) => {

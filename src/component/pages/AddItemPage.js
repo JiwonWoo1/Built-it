@@ -12,11 +12,8 @@ import { firebaseApp } from '../../App'
 export const AddItemPage = (props) => {
     const storage = getStorage(firebaseApp);
     const db = getFirestore(props.firestoreApp)
-    // image
+
     const [image, setImage] = useState(null);
-    const [imageList, setImageList] = useState([]);
-    const imageListRef = ref(storage, "images/");
-    // Auth
     const { user, isAuthenticated, isLoading } = useAuth0();
 
     const [formData, setFormData] = useState({
@@ -30,7 +27,6 @@ export const AddItemPage = (props) => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        console.log("clicked submit");
         try {
             if(image != null) {
                 const imageRef = ref(storage, `images/${image.name}`);
@@ -47,19 +43,12 @@ export const AddItemPage = (props) => {
           }
     }
 
-
-    // image
     useEffect(() => {
-        listAll(imageListRef).then((response) => {
-            response.items.forEach((item) => {
-                getDownloadURL(item).then((url) => {
-                    setImageList((prev) => [...prev, url]);
-                })
-            })
-        });
-    }, []);
+      if (isAuthenticated) {
+          setFormData(prev => ({...prev, user: user.name}))
+      }
+    }, [user])
     
-    console.log("image", image);
 
     return (
         <Container className="add-item-container">
@@ -81,7 +70,7 @@ export const AddItemPage = (props) => {
                 <Form.Label>Used Items</Form.Label>
                 <Form.Control onChange={(e) => setFormData({...formData, used_items: e.target.value})} type="text" placeholder="What materials you used while building this item" />
                 <Form.Text className="text-muted">
-                    This'll other people building this item
+                    This'll help other people building this item
                 </Form.Text>
             </Form.Group>
 
@@ -106,5 +95,4 @@ export const AddItemPage = (props) => {
         </Form>
     </Container>
     )
-
 }

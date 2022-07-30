@@ -1,7 +1,5 @@
-import { collection, getFirestore, where, query } from 'firebase/firestore'
 import React, {useState} from 'react'
 import { Container, Form, Button } from 'react-bootstrap'
-import { firebaseApp } from '../../App'
 
 const Filter = () => {
   const [query, setQuery] = useState("")
