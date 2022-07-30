@@ -12,23 +12,26 @@ import logo1 from './Images/logo1.png'
 const Navigation = () => {
   const { user, isAuthenticated, isLoading } = useAuth0();
 
+
   return (
     <Navbar collapseOnSelect expand="lg" bg="light" variant="dark">
       <Container>
         <Navbar.Brand className="me-auto" href="/">
             <img src={logo1} />
+          <h2>BuiltIt</h2>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
           </Nav>
-          <Nav className='justify-content-center'>
-          <img src={logo} />
+          {/* <Nav className='justify-content-center'>
+          <img src={logo} /> */}
 
-          <Nav.Link href="/add_item"><AddNewItemButton /></Nav.Link>
+          <Nav>
+            <Nav.Link href="/add_item"><AddNewItemButton /></Nav.Link>
             {
               isAuthenticated ?
-              <LogoutButton /> : <LoginButton />
+                <LogoutButton /> : <LoginButton />
             }
           </Nav>
         </Navbar.Collapse>

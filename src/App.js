@@ -1,14 +1,16 @@
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 
 import Navigation from './component/Navigation';
 import Home from './component/pages/Home';
-import { AddItemPage } from './component/pages/AddItemPage';
 
+import { AddItemPage } from './component/pages/AddItemPage';
 import { Auth0Provider } from '@auth0/auth0-react';
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+import SearchPage from './component/pages/SearchPage';
+import UserProfile from './component/pages/UserProfile';
 
 
 // CONFIG FILE GOES HERE
@@ -26,17 +28,28 @@ function App() {
   return (
     <div>
       <Router>
-          <Navigation />
-          <Switch>
+        <Navigation />
+        <Switch>
+
           <Route exact path='/'>
             <Home firebase={firebaseApp} />
           </Route>
+
           <Route path='/add_item'>
             <AddItemPage firebase={firebaseApp} />
           </Route>
-          </Switch>
-      </Router>   
-    </div> 
+
+          <Route path='/search/:id?'>
+            <SearchPage firebase={firebaseApp} />
+          </Route>
+
+          <Route path='/user'>
+            <UserProfile />
+          </Route>
+
+        </Switch>
+      </Router>
+    </div>
   );
 }
 
