@@ -60,7 +60,7 @@ export const AddItemPage = (props) => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            if (image != "") {
+            if (image != "" && image != null) {
                 const imageRef = ref(storage, `images/${image.name}`);
                 uploadBytes(imageRef, image).then((snapshot) => {
                     getDownloadURL(snapshot.ref).then(async(url) => {
