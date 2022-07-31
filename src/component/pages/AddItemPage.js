@@ -66,15 +66,17 @@ export const AddItemPage = (props) => {
                     getDownloadURL(snapshot.ref).then(async(url) => {
                         const docRef = await addDoc(collection(db, "items"), {...formData, image: url});                       
                         console.log("Document written with ID: ", docRef.id);
+                        handleShow();
                     })
                 });
             } else {
                 const docRef = await addDoc(collection(db, "items"), formData);
                 console.log("Document written with ID: ", docRef.id);
+                handleShow();
             }
             
             setFormData({user: user.name})
-            handleShow();
+    
         } catch (e) {
             console.error("Error adding document: ", e);
         }
@@ -89,7 +91,7 @@ export const AddItemPage = (props) => {
 
     return (
         <Container className="add-item-container">
-            
+
             <ConfirmationModal show={showModal} handleClose={handleClose} handleReturn={handleReturn} />
             <h1 style={{color: '#0a3622'}}>Add a new Item</h1>
             <Form onSubmit={handleSubmit}>
