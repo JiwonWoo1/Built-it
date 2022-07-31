@@ -6,7 +6,8 @@ import { getFirestore } from "firebase/firestore";
 import { collection, addDoc } from "firebase/firestore";
 import { getStorage, ref, uploadBytes, listAll, getDownloadURL } from "firebase/storage";
 import { firebaseApp } from '../../App'
-
+import '../../styles/addItem.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const ConfirmationModal = (props) => {
     return <Modal show={props.show} onHide={props.handleClose}>
@@ -98,6 +99,7 @@ export const AddItemPage = (props) => {
 
                 <Form.Group controlId="formFile" className="mb-3">
                     <Form.Label>Add an image</Form.Label>
+                    
                     <Form.Control onChange={(e) => {
                         setImage(e.target.files[0]);
                     }} type="file" multiple />

@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { Button } from 'react-bootstrap'
 
 import { useAuth0 } from '@auth0/auth0-react'
-import Home from '../pages/Home';
 
 
 
@@ -12,7 +11,7 @@ function AddNewItemButton() {
     return isAuthenticated ? (
         <div>
             <div>
-            <Button variant="white"> Add a new item</Button>
+            <Button variant="white" style={{color: "#0A3622", fontSize: 18, marginTop: '15px', cursor: 'pointer'}}> Add a new item</Button>
             </div>
         </div>
     ) : "not a user"
