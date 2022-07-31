@@ -10,7 +10,7 @@ const ProductCard = (props) => {
   
   return (
     <div>
-      <Card style={{ height: '35rem' }}>
+      <Card style={{ height: '40rem' }}>
         <Card.Img variant="top" src={props.image} onClick={handleShow} />
         <Card.Body>
           <Card.Title>{props.name}</Card.Title>

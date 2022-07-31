@@ -26,9 +26,9 @@ const ItemShowCase = (props) => {
 
   return (
     <Container className="item-showcase-container">
-      <Row className="g-4" >
+      <Row  className="g-4" >
         {showcaseItems.length >= 4 && Array.from({ length: 4 }).map((_, idx) => (
-          <Col key={idx} xs={6} md={4}>
+          <Col key={idx} xs={5} md={3}>
             <ProductCard style={{}}
               image={showcaseItems[idx].image}
               name={showcaseItems[idx].name}

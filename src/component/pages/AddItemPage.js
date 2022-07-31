@@ -42,7 +42,8 @@ export const AddItemPage = (props) => {
         used_items: '',
         price: '',
         state: '',
-        city: ''
+        city: '',
+        phone_number: '',
     })
 
     const [showModal, setShowModal] = useState(false);
@@ -136,6 +137,10 @@ export const AddItemPage = (props) => {
                     <Form.Control onChange={(e) => setFormData({ ...formData, city: e.target.value })} type="text" placeholder="Which city you live in?" />
                 </Form.Group>
 
+                <Form.Group className="mb-3" controlId="formCity">
+                    <Form.Label>Phone Number</Form.Label>
+                    <Form.Control onChange={(e) => setFormData({ ...formData, phone_number: e.target.value })} type="text" placeholder="Which city you live in?" />
+                </Form.Group>
                 <Button variant="success" type="submit">
                     Submit
                 </Button>
