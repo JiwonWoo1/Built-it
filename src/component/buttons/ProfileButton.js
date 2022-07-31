@@ -11,7 +11,8 @@ function ProfileButton() {
     return isAuthenticated ? (
         <div>
             <div>
-            <p style={{color: "#0A3622", fontSize: 25, marginTop: '15px'}}>Welcome {user.name}!</p>
+            <Button variant='success'
+            size='sm' style={{color: "white", fontSize: 25, marginTop: '10px'}}>Welcome {user.name}!</Button>
             </div>
         </div>
     ) : "not a user"
