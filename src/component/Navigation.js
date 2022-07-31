@@ -15,7 +15,7 @@ const Navigation = () => {
 
 
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar collapseOnSelect expand="lg" bg="light" variant="dark">
       <Container>
         <Navbar.Brand className="m-auto" href="/">
             <img src={logo} />
