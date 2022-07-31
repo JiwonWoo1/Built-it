@@ -100,6 +100,11 @@ export const AddItemPage = (props) => {
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formDescription">
+                    <Form.Label>Builtit Name</Form.Label>
+                    <Form.Control onChange={(e) => setFormData({ ...formData, name: e.target.value })} type="text" placeholder="Enter description" />
+                </Form.Group>
+
+                <Form.Group className="mb-3" controlId="formDescription">
                     <Form.Label>Creation description</Form.Label>
                     <Form.Control onChange={(e) => setFormData({ ...formData, description: e.target.value })} type="text" placeholder="Enter description" />
                 </Form.Group>
