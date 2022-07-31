@@ -12,9 +12,9 @@ const Home = () => {
   return (
     <Container>
         <div className='container'>
-            <img src={descriptionPic} className="image d-block w-100"/>
+            <img src={descriptionPic} className="image d-block w-100" width={'300px'}/>
                 <p className='header'>
-                  Empowering hackers all around the world for the next generation of recycled production
+                Empowering hackers all around the world for the next generation of recycled production!
                 </p>
         </div>
         {/* State City Filter */}
@@ -22,8 +22,8 @@ const Home = () => {
 
         {/* Search Product filtering */}
         <Filter />
-        <div style={{width: 800}} className="m-auto">
-          <h2 style={{marginTop: 30, color: '#0A3622'}}>Look how people rebuild recylced items!</h2>
+        <div style={{width: '100%'}} className="m-auto">
+          <h2 style={{margin: '30px 40px 15px 15px', color: '#0A3622', textAlign: 'left', fontSize: '40px'}}>Look how people rebuild recylced items!</h2>
         </div>
         <ItemShowCase />
     </Container>
