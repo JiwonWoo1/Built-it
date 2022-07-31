@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/fire-tracker-hack/static/css/main.6c10b089.css",
+    "main.js": "/fire-tracker-hack/static/js/main.6c03b699.js",
+    "static/media/description.png": "/fire-tracker-hack/static/media/description.e5011cd39c0f282c6b7e.png",
+    "static/media/logo.jpg": "/fire-tracker-hack/static/media/logo.1e473113f5c4f8271fd1.jpg",
+    "static/media/logo1.png": "/fire-tracker-hack/static/media/logo1.92d15644a7579decf664.png",
+    "index.html": "/fire-tracker-hack/index.html",
+    "main.6c10b089.css.map": "/fire-tracker-hack/static/css/main.6c10b089.css.map",
+    "main.6c03b699.js.map": "/fire-tracker-hack/static/js/main.6c03b699.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6c10b089.css",
+    "static/js/main.6c03b699.js"
+  ]
+}
