@@ -60,17 +60,19 @@ export const AddItemPage = (props) => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            if (image != null) {
+            if (image != "") {
                 const imageRef = ref(storage, `images/${image.name}`);
                 uploadBytes(imageRef, image).then((snapshot) => {
-                    getDownloadURL(snapshot.ref).then((url) => {
-                        setFormData(prev => ({ ...prev, image: url }))
+                    getDownloadURL(snapshot.ref).then(async(url) => {
+                        const docRef = await addDoc(collection(db, "items"), {...formData, image: url});                       
+                        console.log("Document written with ID: ", docRef.id);
                     })
                 });
-                console.log(imageRef)
+            } else {
+                const docRef = await addDoc(collection(db, "items"), formData);
+                console.log("Document written with ID: ", docRef.id);
             }
-            const docRef = await addDoc(collection(db, "items"), formData);
-            console.log("Document written with ID: ", docRef.id);
+            
             setFormData({user: user.name})
             handleShow();
         } catch (e) {
