@@ -1,4 +1,38 @@
-# Getting Started with Create React App
+# BuiltIt (Backyard Hack)
+
+## 💡 Project Details
+
+The U.S. produces 268 million tons of trash annually. Most of them are composed of recyclable items. Our team members agonized about how to reduce environmental pollution caused by trash. Encouraging people to reduce their consumption of recyclable waste does not have much effect. We focused on the fact that each individual's actions according to their own rational plans can achieve socially desirable outcomes. People can experience the direct benefits of generating revenue without much cost burden and the indirect benefits of helping society and protecting the environment.
+
+## :eyes: What it does
+
+
+## :runner: How we built it
+- Frontend: HTML, CSS, ReactJS, Bootstrap
+- Database: Firebase
+- Authentication: Auth0
+- Deploying and hosting a website using Heroku
+
+## :fire: Use of Firebase
+- We have used Firebase as a database. We stored user's data, all the items from users into Firebase
+
+## :closed_lock_with_key: Use of Auth0
+- We have used Auth0 for secure user authentication and send data to Firebase to store for user's items
+
+## :crossed_swords: Challenges we ran into
+-
+
+## :trophy: Accomplishments that we're proud of
+-
+
+## :book: What we learned
+-
+
+## :bangbang: What's next for BuiltIt
+-
+
+# Installing
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

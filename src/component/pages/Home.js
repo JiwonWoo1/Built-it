@@ -14,9 +14,7 @@ const Home = () => {
         <div className='container'>
             <img src={descriptionPic} className="image d-block w-100"/>
                 <p className='header'>
-                  You can save the Earth!
-                  You can make Money!
-                  Show us recreated items with your unique and creative ideas!
+                  Empowering hackers all around the world for the next generation of recycled production
                 </p>
         </div>
         {/* State City Filter */}
