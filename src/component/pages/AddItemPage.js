@@ -89,6 +89,7 @@ export const AddItemPage = (props) => {
 
     return (
         <Container className="add-item-container">
+            
             <ConfirmationModal show={showModal} handleClose={handleClose} handleReturn={handleReturn} />
             <h1 style={{color: '#0a3622'}}>Add a new Item</h1>
             <Form onSubmit={handleSubmit}>
