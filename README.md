@@ -12,6 +12,7 @@ It lets users showcase their creations, made by using recycled items and also se
 - Database: Firebase
 - Authentication: Auth0
 - Deploying and hosting a website using Heroku
+- Prototype: Figma
 
 ## :fire: Use of Firebase
 - We have used Firebase as a database. We stored user's data, all the items from users into Firebase
