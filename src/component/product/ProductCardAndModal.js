@@ -23,12 +23,12 @@ const ProductCard = (props) => {
         </Card.Footer>
       </Card>
 
-      <Modal show={show} onHide={handleClose}>
+      <Modal styles={{width: '45rem'}}show={show} onHide={handleClose} dialogClassName="modal-450w">
         <Modal.Header closeButton>
           <Modal.Title>{props.name}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Image fluid={true} src={props.image} />
+          <Image fluid={true} src={props.image} style={{width: '450px'}}/>
           {props.description}
           </Modal.Body>
         <Modal.Footer>
