@@ -36,6 +36,7 @@ export const AddItemPage = (props) => {
     const [formData, setFormData] = useState({
         user: '',
         image: '',
+        name: '',
         description: '',
         used_items: '',
         price: '',
@@ -93,7 +94,7 @@ export const AddItemPage = (props) => {
                 <Form.Group controlId="formFile" className="mb-3">
                     <Form.Label>Add an image</Form.Label>
                     <Form.Control onChange={(e) => {
-                        setFormData(e.target.files[0]);
+                        setImage(e.target.files[0]);
                     }} type="file" multiple />
 
                 </Form.Group>
